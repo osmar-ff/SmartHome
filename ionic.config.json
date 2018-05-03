@@ -1,6 +1,6 @@
 {
-  "name": "newProject",
-  "app_id": "",
+  "name": "ionic2-home-automation-app",
+  "app_id": "fae9a649",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

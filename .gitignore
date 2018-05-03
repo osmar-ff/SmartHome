@@ -11,9 +11,9 @@ log.txt
 *.sublime-workspace
 .vscode/
 npm-debug.log*
+*.iml
 
 .idea/
-.sourcemaps/
 .sass-cache/
 .tmp/
 .versions/

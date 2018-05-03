@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Automação Residencial</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+
+  <div *ngIf="isConnected">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col class="center">
+          <br>
+          <button ion-button color="danger" outline (click)="disconnect($event)">Desconecte</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-list>
+      <ion-list-header>
+        Consumo
+      </ion-list-header>
+      <ion-item>
+        <h2>Watts</h2>
+
+        <ion-note item-right>{{ esp8266.voltage }}W</ion-note>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+        Sensores
+      </ion-list-header>
+      <ion-item>
+        <h2>Temperatura</h2>
+
+        <ion-note item-right>{{ sensor.temperature }}&deg;С</ion-note>
+      </ion-item>
+      <ion-item>
+        <h2>Umidade</h2>
+
+        <ion-note item-right>{{ sensor.humidity }}%</ion-note>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+         Controle
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Iluminação</ion-label>
+        <ion-toggle [(ngModel)]="relay1PowerOnModel" color="secondary"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="!isConnected">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col class="center">
+          <br>
+          <button ion-button color="secondary" outline (click)="connect($event)">Conecte</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>
