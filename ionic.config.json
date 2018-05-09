@@ -1,6 +1,6 @@
 {
   "name": "SmartHome",
-  "app_id": "",
+  "app_id": "b9f28464",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

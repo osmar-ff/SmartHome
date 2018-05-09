@@ -17,20 +17,18 @@
       </ion-row>
     </ion-grid>
 
-
-    <ion-list>
-      <ion-item>
+	<ion-item>
         <ion-label>Lâmpada</ion-label>
         <ion-toggle [(ngModel)]="relay1PowerOnModel" color="secondary"></ion-toggle>
       </ion-item>
-	  <ion-item id="casa-range1">
+
+	<ion-item id="casa-range1">
       <ion-range min="0" max="5" step="1" color="assertive" value="1">
         <ion-label range-left>
           Dimmer (a ser implementado)
         </ion-label>
       </ion-range>
     </ion-item>
-    </ion-list>
   </div>
 
   <div *ngIf="!isConnected">
