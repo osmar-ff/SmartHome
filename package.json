@@ -1,7 +1,7 @@
 {
-  "name": "ionic2-home-automation-app",
-  "author": "Yury Bushev",
-  "homepage": "https://github.com/bushev/ionic2-home-automation-app",
+  "name": "SmartHome",
+  "author": "Osmar Ferreira",
+  "homepage": "",
   "private": true,
   "scripts": {
     "build": "ionic-app-scripts build",

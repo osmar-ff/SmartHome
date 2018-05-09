@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 
 import {HomePage} from '../home/home';
+import {AboutPage} from '../about/about';
 import {SettingsComponent} from '../settings/settings.component';
 
 @Component({
@@ -11,6 +12,7 @@ export class TabsPage {
     // should be each tab's root Page
     tab1Root: any = HomePage;
     tab2Root: any = SettingsComponent;
+	tab3Root: any = AboutPage;
 
     constructor() {
 

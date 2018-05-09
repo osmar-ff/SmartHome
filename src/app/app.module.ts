@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {IonicApp, IonicModule} from 'ionic-angular';
 import {MyApp} from './app.component';
 import {HomePage} from '../pages/home/home';
+import {AboutPage} from '../pages/about/about';
 import {TabsPage} from '../pages/tabs/tabs';
 import {LoggerService} from '../core/logger.service';
 import {MQTTService} from '../core/mqtt.service';
@@ -14,7 +15,8 @@ import {LogsComponent} from '../pages/settings/logs.component';
         HomePage,
         TabsPage,
         SettingsComponent,
-        LogsComponent
+        LogsComponent,
+		AboutPage
     ],
     imports: [
         IonicModule.forRoot(MyApp)
@@ -25,7 +27,8 @@ import {LogsComponent} from '../pages/settings/logs.component';
         HomePage,
         TabsPage,
         SettingsComponent,
-        LogsComponent
+        LogsComponent,
+		AboutPage
     ],
     providers: [LoggerService, MQTTService]
 })

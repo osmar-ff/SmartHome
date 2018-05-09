@@ -32,10 +32,10 @@ export class MQTTService {
         }
 
         this._client = new MqttClient({
-            host: 'broker.mqttdashboard.com',
+            host: 'broker.hivemq.com',
             port: 8000,
-            username: 'testando',
-            password: 'yellow', 
+            username: '0smart',
+            password: '876876', 
             will: {
                 topic: `${this._prefix}/status`,
                 payload: `offline`,

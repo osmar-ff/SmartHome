@@ -46,7 +46,7 @@ export class HomePage {
 
         this.relay.powerOn = value;
         
-        this.mqtt.publish('ATC/relay/1', value ? 'on' : 'off', {retain: true, qos: 2});
+        this.mqtt.publish('/OsmarIME/lamp/1', value ? 'on' : 'off', {retain: true, qos: 2});
     }
 
     connect() {
@@ -60,27 +60,13 @@ export class HomePage {
             this.isConnected = true;
 
 
-            this.mqtt.subscribe('ATC/ESP8266/voltage', (topic: string, voltage: string) => {
-
-                this.esp8266.voltage = voltage;
-                console.log("subscreveuCERTO");
-            });
-
 
             console.log("SUB-entre-CERTO");
 
 
-            this.mqtt.subscribe('ATC/DHT11/temperature', (topic: string, temperature: string) => {
+     
 
-                this.sensor.temperature = temperature;
-            });
-
-            this.mqtt.subscribe('ATC/DHT11/humidity', (topic: string, humidity: string) => {
-
-                this.sensor.humidity = humidity;
-            });
-
-            this.mqtt.subscribe('ATC/relay/1', (topic: string, powerOn: string) => {
+            this.mqtt.subscribe('/OsmarIME/lamp/1', (topic: string, powerOn: string) => {
 
                 if (this.relay.powerOn !== (powerOn === 'on')) {
 

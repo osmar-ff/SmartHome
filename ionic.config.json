@@ -1,6 +1,6 @@
 {
-  "name": "ionic2-home-automation-app",
-  "app_id": "fae9a649",
+  "name": "SmartHome",
+  "app_id": "",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

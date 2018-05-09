@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Automação Residencial</ion-title>
+    <ion-title>SmartHome</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -12,47 +12,24 @@
       <ion-row>
         <ion-col class="center">
           <br>
-          <button ion-button color="danger" outline (click)="disconnect($event)">Desconecte</button>
+          <button ion-button color="danger"  (click)="disconnect($event)">DESCONECTAR</button>
         </ion-col>
       </ion-row>
     </ion-grid>
 
-    <ion-list>
-      <ion-list-header>
-        Consumo
-      </ion-list-header>
-      <ion-item>
-        <h2>Watts</h2>
-
-        <ion-note item-right>{{ esp8266.voltage }}W</ion-note>
-      </ion-item>
-    </ion-list>
 
     <ion-list>
-      <ion-list-header>
-        Sensores
-      </ion-list-header>
       <ion-item>
-        <h2>Temperatura</h2>
-
-        <ion-note item-right>{{ sensor.temperature }}&deg;С</ion-note>
-      </ion-item>
-      <ion-item>
-        <h2>Umidade</h2>
-
-        <ion-note item-right>{{ sensor.humidity }}%</ion-note>
-      </ion-item>
-    </ion-list>
-
-    <ion-list>
-      <ion-list-header>
-         Controle
-      </ion-list-header>
-
-      <ion-item>
-        <ion-label>Iluminação</ion-label>
+        <ion-label>Lâmpada</ion-label>
         <ion-toggle [(ngModel)]="relay1PowerOnModel" color="secondary"></ion-toggle>
       </ion-item>
+	  <ion-item id="casa-range1">
+      <ion-range min="0" max="5" step="1" color="assertive" value="1">
+        <ion-label range-left>
+          Dimmer (a ser implementado)
+        </ion-label>
+      </ion-range>
+    </ion-item>
     </ion-list>
   </div>
 
@@ -62,7 +39,7 @@
       <ion-row>
         <ion-col class="center">
           <br>
-          <button ion-button color="secondary" outline (click)="connect($event)">Conecte</button>
+          <button ion-button color="secondary"  (click)="connect($event)">CONECTAR</button>
         </ion-col>
       </ion-row>
     </ion-grid>
